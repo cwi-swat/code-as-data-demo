@@ -2,33 +2,45 @@
 public class BadProgrammer {
 	public boolean justOnce() {
 		// you never know!
-		return System.out != null;
+		if (System.out != null) {
+			return true;
+		}
+		else {
+			return false;
+		}
 	}
 	
 	public boolean twoViolations() {
-		return (System.out != null);
+		if (System.out != null) 
+			return true;
+		else 
+			return false;
 
 	}
 
 	public void glassHalfFull(int glass) {
-		if ((glass < 50)) {
-			System.out.println("BBQ?");
-		} 
- 		else {
+		if (!(glass < 50)) {
 			// comments inside
 			System.out.println("The cake is a lie");
 			throw new RuntimeException("Escape the stack!");
+		} 
+ 		else {
+			System.out.println("BBQ?");
 		}
 	}
 
 	private final static Object fallBack = "DigiNotar";
 
 	public boolean checkCertificate(Object certificate) {
-		if (certificate == null) {
+		if (certificate == null) 
 			System.out.println("oh oh");
-		}
-		certificate = fallBack;
+			certificate = fallBack;
 
-		return certificate.hashCode() > 1;
+		if (certificate.hashCode() > 1) {
+			return true;
+		}
+		else {
+			return false;
+		}
 	}
 }

@@ -6,6 +6,7 @@ import lang::java::m3::Core;
 import Relation;  
 import util::IDEServices;
 
+
 public loc equalsMethod = |java+method:///java/lang/Object/equals(java.lang.Object)|;
 public loc hashCodeMethod = |java+method:///java/lang/Object/hashCode()|;
 
